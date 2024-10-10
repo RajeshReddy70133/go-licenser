@@ -1,0 +1,1 @@
+2024/10/08 16:47:24 Error connecting to Cassandra database: gocql: unable to create session: unable to discover protocol version: dial tcp 127.0.0.1:9042: connectex: No connection could be made because the target machine actively refused it.

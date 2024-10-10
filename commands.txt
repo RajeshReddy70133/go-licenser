@@ -1,0 +1,144 @@
+============================
+||	postgres	  ||
+============================
+
+migrate
+-------
+dataprox -database=postgres -user=postgres -port=5432 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops -action=migrate -dbname=migration -exportfile=output.txt -tag=
+
+clearall
+--------
+dataprox -database=postgres -user=postgres -port=5432 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops -action=clearall -dbname=migration -exportfile=output.txt -tag=
+
+check
+-----
+dataprox -database=postgres -user=postgres -port=5432 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops -action=check -dbname=migration -exportfile=output.txt -tag=
+
+snapshot
+--------
+dataprox -database=postgres -user=postgres -port=5432 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops -action=snapshot -dbname=migration -exportfile=output.txt -statefile=file1.sql -tag=
+
+delta
+-----
+dataprox -database=postgres -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops  -action=delta -exportfile=output.txt -prescript=file1.sql -postscript=file2.sql -tag=
+
+
+
+
+===============================
+||	MYSQL		      ||
+===============================
+
+migrate
+-------
+dataprox -database=mysql -user=root -port=3305 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=migrate -dbname=sample -exportfile=output.txt -tag=dev
+
+clearall
+--------
+dataprox -database=mysql -user=root -port=3305 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=clearall -dbname=sample -exportfile=output.txt -tag=dev
+
+check
+-----
+dataprox -database=mysql -user=root -port=3305 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=check -dbname=sample -exportfile=output.txt -tag=dev
+
+snapshot
+--------
+dataprox -database=mysql -user=root -port=3305 -password=opsdigital -host=localhost -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=snapshot -dbname=sample -exportfile=output.txt -prestatefile=file2.sql
+
+delta
+-----
+dataprox -database=mysql -action=delta -difference=difference.sql-folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -exportfile=output.txt -exportfile=output.txt -prescript=file1.sql -postscript=file2.sql diffscript=diffrence.sql
+
+
+===============================
+||	mariadb	      ||
+===============================
+
+migrate
+-------
+dataprox -database=mariadb -host=127.0.0.1 -dbname=mysql -user=root -password=opsdigital -action=migrate -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -port=3305 -exportfile=rafi.txt -tag=dev -prestatefile=before.sql
+
+clearall
+--------
+dataprox -database=mariadb -host=127.0.0.1 -dbname=mysql -user=root -password=opsdigital -action=clearall -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -port=3305 -exportfile=rafi.txt -tag=dev -prestatefile=before.sql
+
+check
+-----
+dataprox -database=mariadb -host=127.0.0.1 -dbname=mysql -user=root -password=opsdigital -action=check -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -port=3305 -exportfile=rafi.txt -tag=dev -prestatefile=before.sql
+
+snapshot
+--------
+dataprox -database=mariadb -user=root -port=3305 -password=opsdigital -host=127.0.0.1 -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=snapshot -dbname=sample -exportfile=output.txt -prestatefile=file2.sql
+
+delta
+-----
+dataprox -database=mariadb -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -exportfile=output.txt -prestatefile=file2.sql -exportfile=output.txt -script1=file1.sql -script2=file2.sql
+===============================
+||	    Db2	     ||
+===============================
+
+migrate
+-------
+dataprox -database=db2 -user=db2admin -port=25000 -password=rajesh -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=migrate  -dbname=sample -exportfile=output.txt -tag=
+
+clearall
+--------
+dataprox -database=db2 -user=db2admin -port=25000 -password=rajesh -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=migrate  -dbname=sample -exportfile=output.txt -tag=
+check
+-----
+dataprox -database=db2 -user=db2admin -port=25000 -password=rajesh -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=migrate  -dbname=sample -exportfile=output.txt -tag=
+
+snapshot
+--------
+dataprox -database=db2 -user=root -port=3305 -password=opsdigital -host=127.0.0.1 -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -action=snapshot -dbname=migration -exportfile=output.txt -prestatefile=file2.sql
+
+delta
+-----
+dataprox -database=db2 -folderpath=C:\Users\dbopsuser1\Desktop\scripts\DBops_mysql -exportfile=output.txt -prestatefile=file2.sql -exportfile=output.txt -script1=file1.sql -script2=file2.sql -action=delta -difference=diffrence.sql
+
+===============================
+||	MSSQL		      ||
+===============================
+
+migrate
+-------
+dataprox -database=mssql -user=rajesh -password=rajesh -host=RAJESHREDDY\SQLEXPRESS -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=migrate  -dbname=reddy -exportfile=output.txt -tag= -port=5432
+
+clearall
+--------
+dataprox -database=mssql -user=rajesh -password=rajesh -host=RAJESHREDDY\SQLEXPRESS -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=clearall  -dbname=reddy -exportfile=output.txt 
+
+check
+-----
+dataprox -database=mssql -user=rajesh -password=rajesh -host=RAJESHREDDY\SQLEXPRESS -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=check  -dbname=reddy -exportfile=output.txt
+
+snapshot
+--------
+dataprox -database=mssql -user=rajesh -password=rajesh -host=RAJESHREDDY\SQLEXPRESS -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=snapshot  -dbname=reddy -exportfile=output.txt -statefile=file1.sql -port=5432
+
+delta
+-----
+dataprox -database=mssql -folderpath=C:\Users\Laxmareddy\Desktop\allc\DBops -action=delta -exportfile=output.txt -script1=file1.sql -script2=file2.sql
+
+=================================
+|| ORACLE
+=================================
+
+ migrate
+---------
+-database=oracle -user=system -port=1522 -password=12345 -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\DBops4 -dbname=mydatabase -action=migrate -exportfile="outputfile.txt" -service=XE -walletLocation="" -tag=dev
+
+check
+------
+dataprox -database=oracle -user=system -port=1522 -password=12345 -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\DBops4 -dbname=mydatabase -action=check -exportfile="outputfile.txt" -service=XE -walletLocation="" -tag=
+
+clearall
+--------
+dataprox -database=oracle -user=system -port=1522 -password=12345 -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\DBops4 -dbname=mydatabase -action=clearall -exportfile="outputfile.txt" -service=XE -walletLocation=""
+
+snapshot
+--------
+dataprox -database=oracle -user=system -port=1522 -password=12345 -host=rajeshreddy -folderpath=C:\Users\Laxmareddy\Desktop\DBops4 -dbname=mydatabase -action=snapshot -exportfile="outputfile.txt" -service=XE -walletLocation="" -prestatefile=file1.sql
+
+delta
+------
